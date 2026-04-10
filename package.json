@@ -1,0 +1,46 @@
+{
+  "name": "spark-motion",
+  "version": "0.1.0",
+  "description": "A motion-first icon library with playful animated SVG icons for React",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup && node -e \"require('node:fs').rmSync('dist/index.d.mts', { force: true })\"",
+    "build:lib": "npm run build",
+    "dev:lib": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "framer-motion": ">=10.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "framer-motion": "^11.18.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.7"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}

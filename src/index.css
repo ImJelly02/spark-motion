@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #FAFAFA;
+}
+
+.playground-shell {
+  padding: 32px;
+}
+
+.playground-top-section {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.icon-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: #BFC6C4;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2C2C2C;
+  cursor: pointer;
+  border: none;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2C2C2C;
+  cursor: pointer;
+  border: none;
+}
+
+input[type='color'] {
+  border: none;
+  padding: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+@media (max-width: 767px) {
+  .playground-shell {
+    padding: 20px 16px;
+  }
+
+  .playground-top-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
