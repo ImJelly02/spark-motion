@@ -59,7 +59,7 @@ export function HeartIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="translate(12 11.6) scale(1.1) translate(-12 -12)">
+      <g transform="translate(12 11.6) scale(1.3) translate(-12 -12)">
         <path d="M12 19.5c-5-3-9-7-8-12C4.5 4 8 3 12 6.5c4-3.5 7.5-2.5 8 1 .5 5-3 9-8 12z" />
         <path d="M11 21.5c0-1 2-1 2 0" />
         <path d="M6 8a4 4 0 0 1 3-3" />

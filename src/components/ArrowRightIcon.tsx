@@ -59,7 +59,7 @@ export function ArrowRightIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="translate(12.5 12) scale(1.18) translate(-12 -12)">
+      <g transform="translate(12.5 12) scale(1.13) translate(-12 -12)">
         <path d="M15 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
         <path d="M5 12c3-1.5 7 .5 10 0"/>
         <path d="M8 9l1 3-1 3"/>

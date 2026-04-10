@@ -59,7 +59,7 @@ export function RefreshIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="translate(12 12) scale(0.95) translate(-12 -12)">
+      <g transform="translate(12 12) scale(1) translate(-12 -12)">
         <path d="M21.5 2v6h-6"/>
         <path d="M21.5 8c-1.5-3.5-5-6-9.5-6-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10"/>
         <path d="M7 8a5 5 0 0 0-1 4.5"/>

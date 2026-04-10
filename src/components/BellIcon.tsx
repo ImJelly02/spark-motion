@@ -58,7 +58,7 @@ export function BellIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="translate(11.6 12.2) scale(1.1) translate(-12 -12)">
+      <g transform="translate(11.6 12.2) scale(1.25) translate(-12 -12)">
         <path d="M18 17H6c-1.5 0-2-1.5-1-2.5 1.5-1.5 2-4 2-6.5a5 5 0 0 1 10 0c0 2.5.5 5 2 6.5 1 1 .5 2.5-1 2.5z" />
         <path d="M10 17v1a2 2 0 1 0 4 0v-1" />
         <path d="M8 8a4 4 0 0 1 4-3" />

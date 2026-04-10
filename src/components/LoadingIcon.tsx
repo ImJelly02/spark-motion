@@ -58,7 +58,7 @@ export function LoadingIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="translate(12 12) scale(1.28) translate(-12 -12)">
+      <g transform="translate(12 12) scale(1.4) translate(-12 -12)">
         <circle cx="12" cy="12" r="2.5" />
         <path d="M12 9.5c-2-6 5-7 3-.5" />
         <path d="M14.5 12c6-2 7 5 .5 3" />
