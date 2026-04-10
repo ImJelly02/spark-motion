@@ -51,7 +51,7 @@ export function Controls({ state, onAnimationType, onSize, onDuration, onColor }
                   padding: '5px 14px',
                   borderRadius: '4px',
                   border: active ? '1.5px solid #FF4F0F' : '1.5px solid #BFC6C4',
-                  background: active ? '#FF4F0F' : 'transparent',
+                  background: active ? '#FF4F0F' : '#FFFFFF',
                   color: active ? '#FAFAFA' : '#7a7a7a',
                   cursor: 'pointer',
                   transition: 'all 0.12s',
@@ -109,6 +109,15 @@ export function Controls({ state, onAnimationType, onSize, onDuration, onColor }
             step={1}
             value={state.size}
             onChange={(e) => onSize(Number(e.target.value))}
+            style={{
+              background: `linear-gradient(
+              to right,
+              #2C2C2C 0%,
+              #2C2C2C ${((state.size - 16) / (64 - 16)) * 100}%,
+              #BFC6C4 ${((state.size - 16) / (64 - 16)) * 100}%,
+              #BFC6C4 100%
+              )`,
+            }}
           />
           <span style={sliderValStyle}>{state.size}px</span>
         </div>
@@ -125,6 +134,15 @@ export function Controls({ state, onAnimationType, onSize, onDuration, onColor }
             step={0.1}
             value={state.duration}
             onChange={(e) => onDuration(Number(e.target.value))}
+            style={{
+              background: `linear-gradient(
+              to right,
+              #2C2C2C 0%,
+              #2C2C2C ${((state.duration - 0.1) / (2.0 - 0.1)) * 100}%,
+              #BFC6C4 ${((state.duration - 0.1) / (2.0 - 0.1)) * 100}%,
+              #BFC6C4 100%
+              )`,
+            }}
           />
           <span style={sliderValStyle}>{state.duration.toFixed(1)}s</span>
         </div>
