@@ -112,7 +112,7 @@ export function Preview({ state }: Props) {
             fontSize: '10px',
             fontFamily: "'Inter', sans-serif",
             fontWeight: 400,
-            color: '#BFC6C4',
+            color: '#7a7a7a',
             letterSpacing: '0.2px',
             zIndex: 1,
           }}

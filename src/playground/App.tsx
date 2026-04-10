@@ -47,7 +47,7 @@ export function PlaygroundApp() {
             <h1
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: '22px',
+                fontSize: '24px',
                 fontWeight: 700,
                 margin: 0,
                 color: '#2C2C2C',
@@ -66,7 +66,7 @@ export function PlaygroundApp() {
               v0.1.0
             </span>
           </div>
-          <p style={{ margin: 0, fontSize: '13px', color: '#7a7a7a' }}>
+          <p style={{ margin: 0, fontSize: '14px', color: '#7a7a7a' }}>
             A motion-first icon library for React
           </p>
         </header>
@@ -91,14 +91,14 @@ export function PlaygroundApp() {
           {/* Right: Tabbed preview / code */}
           <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
             {/* Tab bar */}
-            <div style={{ display: 'flex', marginBottom: '-2px', position: 'relative', zIndex: 2 }}>
+            <div style={{ display: 'flex', marginBottom: '-1px', position: 'relative', zIndex: 2 }}>
               <button
                 style={{
                   ...tabBase,
                   border: activeTab === 'preview' ? '2px solid #FF4F0F' : '1.5px solid #BFC6C4',
-                  borderBottom: activeTab === 'preview' ? '2px solid #FAFAFA' : '1.5px solid #BFC6C4',
-                  color: activeTab === 'preview' ? '#FF4F0F' : '#7a7a7a',
-                  background: activeTab === 'preview' ? '#FAFAFA' : 'transparent',
+                  borderBottom: activeTab === 'preview' ? '2px solid #FF4F0F' : '1.5px solid #BFC6C4',
+                  color: activeTab === 'preview' ? '#FAFAFA' : '#7a7a7a',
+                  background: activeTab === 'preview' ? '#FF4F0F' : '#FFFFFF',
                   zIndex: activeTab === 'preview' ? 3 : 1,
                 }}
                 onClick={() => setActiveTab('preview')}
@@ -111,7 +111,7 @@ export function PlaygroundApp() {
                   border: activeTab === 'code' ? '2px solid #2C2C2C' : '1.5px solid #BFC6C4',
                   borderBottom: activeTab === 'code' ? '2px solid #2C2C2C' : '1.5px solid #FF4F0F',
                   color: activeTab === 'code' ? '#FAFAFA' : '#7a7a7a',
-                  background: activeTab === 'code' ? '#2C2C2C' : 'transparent',
+                  background: activeTab === 'code' ? '#2C2C2C' : '#FFFFFF',
                   zIndex: activeTab === 'code' ? 3 : 1,
                 }}
                 onClick={() => setActiveTab('code')}
