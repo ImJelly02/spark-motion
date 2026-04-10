@@ -91,15 +91,15 @@ export function PlaygroundApp() {
           {/* Right: Tabbed preview / code */}
           <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
             {/* Tab bar */}
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', marginBottom: '-2px', position: 'relative', zIndex: 2 }}>
               <button
                 style={{
                   ...tabBase,
-                  border: '1.5px solid #BFC6C4',
-                  borderBottom: activeTab === 'preview' ? '0px solid #FAFAFA' : '0px solid #BFC6C4',
-                  color: activeTab === 'preview' ? '#2C2C2C' : '#7a7a7a',
+                  border: activeTab === 'preview' ? '2px solid #FF4F0F' : '1.5px solid #BFC6C4',
+                  borderBottom: activeTab === 'preview' ? '2px solid #FAFAFA' : '1.5px solid #BFC6C4',
+                  color: activeTab === 'preview' ? '#FF4F0F' : '#7a7a7a',
                   background: activeTab === 'preview' ? '#FAFAFA' : 'transparent',
-                  zIndex: activeTab === 'preview' ? 1 : 0,
+                  zIndex: activeTab === 'preview' ? 3 : 1,
                 }}
                 onClick={() => setActiveTab('preview')}
               >
@@ -108,11 +108,11 @@ export function PlaygroundApp() {
               <button
                 style={{
                   ...tabBase,
-                  border: activeTab === 'code' ? '1.5px solid #2C2C2C' : '1.5px solid #BFC6C4',
-                  borderBottom: activeTab === 'code' ? '0px solid #2C2C2C' : '0px solid #BFC6C4',
-                  color: activeTab === 'code' ? '#7a7a7a' : '#7a7a7a',
+                  border: activeTab === 'code' ? '2px solid #2C2C2C' : '1.5px solid #BFC6C4',
+                  borderBottom: activeTab === 'code' ? '2px solid #2C2C2C' : '1.5px solid #FF4F0F',
+                  color: activeTab === 'code' ? '#FAFAFA' : '#7a7a7a',
                   background: activeTab === 'code' ? '#2C2C2C' : 'transparent',
-                  zIndex: activeTab === 'code' ? 1 : 0,
+                  zIndex: activeTab === 'code' ? 3 : 1,
                 }}
                 onClick={() => setActiveTab('code')}
               >

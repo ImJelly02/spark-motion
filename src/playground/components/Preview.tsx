@@ -47,7 +47,7 @@ export function Preview({ state }: Props) {
     <div
       style={{
         background: '#FAFAFA',
-        border: '2px solid #BFC6C4',
+        border: '2px solid #FF4F0F',
         borderRadius: '0 4px 4px 4px',
         display: 'flex',
         alignItems: 'center',
