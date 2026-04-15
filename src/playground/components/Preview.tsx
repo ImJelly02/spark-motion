@@ -14,7 +14,7 @@ function GridOverlay() {
     >
       <defs>
         <pattern id="grid-sm" width="24" height="24" patternUnits="userSpaceOnUse">
-          <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#E0E3E2" strokeWidth="0.5" />
+          <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#E0E0E0" strokeWidth="0.5" />
         </pattern>
         <pattern id="grid-lg" width="96" height="96" patternUnits="userSpaceOnUse">
           <rect width="96" height="96" fill="url(#grid-sm)" />
@@ -26,19 +26,21 @@ function GridOverlay() {
       <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#D4D8D6" strokeWidth="0.5" />
       <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#D4D8D6" strokeWidth="0.5" />
       {/* Concentric circles */}
-      <circle cx="50%" cy="50%" r="64" fill="none" stroke="#E0E3E2" strokeWidth="0.5" />
-      <circle cx="50%" cy="50%" r="40" fill="none" stroke="#E0E3E2" strokeWidth="0.5" />
-      <circle cx="50%" cy="50%" r="16" fill="none" stroke="#E0E3E2" strokeWidth="0.5" />
+      <circle cx="50%" cy="50%" r="64" fill="none" stroke="#E0E0E0" strokeWidth="0.5" />
+      <circle cx="50%" cy="50%" r="40" fill="none" stroke="#E0E0E0" strokeWidth="0.5" />
+      <circle cx="50%" cy="50%" r="16" fill="none" stroke="#E0E0E0" strokeWidth="0.5" />
     </svg>
   )
 }
 
 export function Preview({ state }: Props) {
   const { selectedIcon, animation, size, duration, color, animationType } = state
-  const Icon = iconMap[selectedIcon].component
+  const iconMeta = iconMap[selectedIcon]
+  const Icon = iconMeta.component
 
-  const animated = animationType === 'animated' || animationType === 'loop'
+  const animated = animationType === 'interactive' || animationType === 'loop'
   const loop = animationType === 'loop'
+  const animatedHint = iconMeta.defaultAnimation === 'spin' ? 'auto-play' : 'click to trigger'
 
   // Key forces remount (re-triggers mount animations) when relevant props change
   const iconKey = `${selectedIcon}-${animation}-${animationType}`
@@ -46,8 +48,8 @@ export function Preview({ state }: Props) {
   return (
     <div
       style={{
-        background: '#FAFAFA',
-        border: '2px solid #FF4F0F',
+        background: '#FDFDFD',
+        border: '2px solid #FF5C00',
         borderRadius: '0 4px 4px 4px',
         display: 'flex',
         alignItems: 'center',
@@ -79,7 +81,7 @@ export function Preview({ state }: Props) {
           fontSize: '10px',
           fontFamily: "'Inter', sans-serif",
           fontWeight: 500,
-          color: '#7a7a7a',
+          color: '#7A7A7A',
           textTransform: 'uppercase',
           letterSpacing: '0.4px',
           zIndex: 1,
@@ -95,7 +97,7 @@ export function Preview({ state }: Props) {
           fontSize: '10px',
           fontFamily: "'Inter', sans-serif",
           fontWeight: 500,
-          color: '#7a7a7a',
+          color: '#7A7A7A',
           textTransform: 'uppercase',
           letterSpacing: '0.4px',
           zIndex: 1,
@@ -103,7 +105,7 @@ export function Preview({ state }: Props) {
       >
         {size}px
       </span>
-      {animationType === 'animated' && (
+      {animationType === 'interactive' && (
         <span
           style={{
             position: 'absolute',
@@ -112,12 +114,12 @@ export function Preview({ state }: Props) {
             fontSize: '10px',
             fontFamily: "'Inter', sans-serif",
             fontWeight: 400,
-            color: '#7a7a7a',
+            color: '#121212',
             letterSpacing: '0.2px',
             zIndex: 1,
           }}
         >
-          click to animate
+          {animatedHint}
         </span>
       )}
     </div>

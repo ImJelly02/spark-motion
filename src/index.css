@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #FAFAFA;
+  background: #FDFDFD;
 }
 
 .playground-shell {
@@ -41,7 +41,7 @@ input[type='range']::-webkit-slider-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #2C2C2C;
+  background: #121212;
   cursor: pointer;
   border: none;
 }
@@ -50,7 +50,7 @@ input[type='range']::-moz-range-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #2C2C2C;
+  background: #121212;
   cursor: pointer;
   border: none;
 }
