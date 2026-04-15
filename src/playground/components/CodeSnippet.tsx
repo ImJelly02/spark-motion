@@ -8,7 +8,7 @@ function buildSnippet(state: PlaygroundState): string {
 
   const props: string[] = []
 
-  if (animationType === 'animated' || animationType === 'loop') {
+  if (animationType === 'interactive' || animationType === 'loop') {
     props.push('  animated')
   }
   if (size !== 24) props.push(`  size={${size}}`)
@@ -114,7 +114,7 @@ function tokeniseLine(line: string): Token[] {
 
 function CopyIcon() {
   return (
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FAFAFA"
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FDFDFD"
       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
       <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
@@ -154,8 +154,8 @@ export function CodeSnippet({ state }: Props) {
   return (
     <div
       style={{
-        background: '#2C2C2C',
-        border: '1.5px solid #2C2C2C',
+        background: '#121212',
+        border: '1.5px solid #121212',
         borderRadius: '0 4px 4px 4px',
         minHeight: '240px',
         padding: '14px 18px',

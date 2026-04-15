@@ -34,8 +34,8 @@ export function PlaygroundApp() {
       className="playground-shell"
       style={{
         minHeight: '100vh',
-        background: '#FAFAFA',
-        color: '#2C2C2C',
+        background: '#FDFDFD',
+        color: '#121212',
         fontFamily: "'Inter', sans-serif",
       }}
     >
@@ -47,10 +47,10 @@ export function PlaygroundApp() {
             <h1
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: '24px',
+                fontSize: '28px',
                 fontWeight: 700,
                 margin: 0,
-                color: '#2C2C2C',
+                color: '#121212',
               }}
             >
               spark-motion
@@ -58,15 +58,15 @@ export function PlaygroundApp() {
             <span
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontSize: '11px',
+                fontSize: '12px',
                 fontWeight: 400,
-                color: '#7a7a7a',
+                color: '#7A7A7A',
               }}
             >
               v0.1.0
             </span>
           </div>
-          <p style={{ margin: 0, fontSize: '14px', color: '#7a7a7a' }}>
+          <p style={{ margin: 0, fontSize: '16px', color: '#7A7A7A' }}>
             A motion-first icon library for React
           </p>
         </header>
@@ -95,10 +95,10 @@ export function PlaygroundApp() {
               <button
                 style={{
                   ...tabBase,
-                  border: activeTab === 'preview' ? '2px solid #FF4F0F' : '1.5px solid #BFC6C4',
-                  borderBottom: activeTab === 'preview' ? '2px solid #FF4F0F' : '1.5px solid #BFC6C4',
-                  color: activeTab === 'preview' ? '#FAFAFA' : '#7a7a7a',
-                  background: activeTab === 'preview' ? '#FF4F0F' : '#FFFFFF',
+                  border: activeTab === 'preview' ? '2px solid #FF5C00' : '1.5px solid #BFC6C4',
+                  borderBottom: activeTab === 'preview' ? '2px solid #FF5C00' : '1.5px solid #BFC6C4',
+                  color: activeTab === 'preview' ? '#FDFDFD' : '#7A7A7A',
+                  background: activeTab === 'preview' ? '#FF5C00' : '#FFFFFF',
                   zIndex: activeTab === 'preview' ? 3 : 1,
                 }}
                 onClick={() => setActiveTab('preview')}
@@ -108,10 +108,10 @@ export function PlaygroundApp() {
               <button
                 style={{
                   ...tabBase,
-                  border: activeTab === 'code' ? '2px solid #2C2C2C' : '1.5px solid #BFC6C4',
-                  borderBottom: activeTab === 'code' ? '2px solid #2C2C2C' : '1.5px solid #FF4F0F',
-                  color: activeTab === 'code' ? '#FAFAFA' : '#7a7a7a',
-                  background: activeTab === 'code' ? '#2C2C2C' : '#FFFFFF',
+                  border: activeTab === 'code' ? '2px solid #121212' : '1.5px solid #BFC6C4',
+                  borderBottom: activeTab === 'code' ? '2px solid #121212' : '1.5px solid #FF5C00',
+                  color: activeTab === 'code' ? '#FDFDFD' : '#7A7A7A',
+                  background: activeTab === 'code' ? '#121212' : '#FFFFFF',
                   zIndex: activeTab === 'code' ? 3 : 1,
                 }}
                 onClick={() => setActiveTab('code')}

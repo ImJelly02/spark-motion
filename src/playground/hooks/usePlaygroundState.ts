@@ -3,7 +3,7 @@ import type { SparkMotionAnimation } from '../../types/icon'
 import type { IconName } from '../data/icons'
 import { iconMap } from '../data/icons'
 
-export type AnimationType = 'animated' | 'loop' | 'static'
+export type AnimationType = 'interactive' | 'loop' | 'static'
 
 export interface PlaygroundState {
   selectedIcon: IconName
@@ -22,10 +22,10 @@ function initialState(): PlaygroundState {
   return {
     selectedIcon: DEFAULT_ICON,
     animation: icon.defaultAnimation,
-    animationType: 'animated',
+    animationType: 'interactive',
     size: 48,
     duration: icon.defaultDuration,
-    color: '#2C2C2C',
+    color: '#121212',
     activeTab: 'preview',
   }
 }

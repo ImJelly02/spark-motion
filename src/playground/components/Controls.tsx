@@ -1,6 +1,6 @@
 import type { PlaygroundState, AnimationType } from '../hooks/usePlaygroundState'
 
-const ANIM_TYPES: AnimationType[] = ['animated', 'loop', 'static']
+const ANIM_TYPES: AnimationType[] = ['interactive', 'loop', 'static']
 
 interface Props {
   state: PlaygroundState
@@ -14,7 +14,7 @@ const labelStyle: React.CSSProperties = {
   fontFamily: "'Inter', sans-serif",
   fontSize: '11px',
   fontWeight: 500,
-  color: '#7a7a7a',
+  color: '#7A7A7A',
   textTransform: 'uppercase',
   letterSpacing: '0.5px',
   marginBottom: '6px',
@@ -25,7 +25,7 @@ const sliderValStyle: React.CSSProperties = {
   fontFamily: "'DM Sans', sans-serif",
   fontSize: '13px',
   fontWeight: 500,
-  color: '#2C2C2C',
+  color: '#121212',
   minWidth: '36px',
   textAlign: 'right',
 }
@@ -50,9 +50,9 @@ export function Controls({ state, onAnimationType, onSize, onDuration, onColor }
                   fontWeight: 500,
                   padding: '5px 14px',
                   borderRadius: '4px',
-                  border: active ? '1.5px solid #FF4F0F' : '1.5px solid #BFC6C4',
-                  background: active ? '#FF4F0F' : '#FFFFFF',
-                  color: active ? '#FAFAFA' : '#7a7a7a',
+                  border: active ? '1.5px solid #FF5C00' : '1.5px solid #BFC6C4',
+                  background: active ? '#FF5C00' : '#FFFFFF',
+                  color: active ? '#FDFDFD' : '#7A7A7A',
                   cursor: 'pointer',
                   transition: 'all 0.12s',
                 }}
@@ -88,9 +88,9 @@ export function Controls({ state, onAnimationType, onSize, onDuration, onColor }
           <span
             style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: '13px',
+              fontSize: '14px',
               fontWeight: 500,
-              color: '#2C2C2C',
+              color: '#121212',
             }}
           >
             {state.color.toUpperCase()}
@@ -112,8 +112,8 @@ export function Controls({ state, onAnimationType, onSize, onDuration, onColor }
             style={{
               background: `linear-gradient(
               to right,
-              #2C2C2C 0%,
-              #2C2C2C ${((state.size - 16) / (64 - 16)) * 100}%,
+              #121212 0%,
+              #121212 ${((state.size - 16) / (64 - 16)) * 100}%,
               #BFC6C4 ${((state.size - 16) / (64 - 16)) * 100}%,
               #BFC6C4 100%
               )`,
@@ -137,8 +137,8 @@ export function Controls({ state, onAnimationType, onSize, onDuration, onColor }
             style={{
               background: `linear-gradient(
               to right,
-              #2C2C2C 0%,
-              #2C2C2C ${((state.duration - 0.1) / (2.0 - 0.1)) * 100}%,
+              #121212 0%,
+              #121212 ${((state.duration - 0.1) / (2.0 - 0.1)) * 100}%,
               #BFC6C4 ${((state.duration - 0.1) / (2.0 - 0.1)) * 100}%,
               #BFC6C4 100%
               )`,

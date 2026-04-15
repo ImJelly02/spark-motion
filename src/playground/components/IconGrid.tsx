@@ -14,7 +14,7 @@ export function IconGrid({ selectedIcon, onSelect }: Props) {
           fontFamily: "'Inter', sans-serif",
           fontSize: '11px',
           fontWeight: 500,
-          color: '#7a7a7a',
+          color: '#7A7A7A',
           textTransform: 'uppercase',
           letterSpacing: '0.8px',
           margin: '0 0 14px',
@@ -35,8 +35,8 @@ export function IconGrid({ selectedIcon, onSelect }: Props) {
               key={icon.name}
               onClick={() => onSelect(icon.name)}
               style={{
-                background: '#FAFAFA',
-                border: active ? '2px solid #FF4F0F' : '2px solid #BFC6C4',
+                background: '#FDFDFD',
+                border: active ? '2px solid #FF5C00' : '2px solid #BFC6C4',
                 borderRadius: '4px',
                 padding: '20px 8px 12px',
                 textAlign: 'center',
@@ -54,13 +54,13 @@ export function IconGrid({ selectedIcon, onSelect }: Props) {
                 if (!active) (e.currentTarget as HTMLButtonElement).style.borderColor = '#BFC6C4'
               }}
             >
-              <icon.component size={28} color="#2C2C2C" />
+              <icon.component size={28} color="#121212" />
               <span
                 style={{
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: '11px',
+                  fontSize: '12px',
                   fontWeight: 500,
-                  color: '#7a7a7a',
+                  color: '#7A7A7A',
                   textTransform: 'lowercase',
                   letterSpacing: '0.3px',
                   marginTop: '10px',
