@@ -58,7 +58,9 @@ export function SendIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <path d="M12.4 12c0-2 5.6-5.6 5.6-5.6c2.3-.1-2.1 14-5.7 13.5c-1.7-.1-1.5-6.4-1.9-5.9c0 0 0 0 0 0c0-.6-5.8-.1-5.9-1.9c-.5-3.6 13-7.6 13.5-5.7"/>
+      <g transform="translate(12 12) scale(1.4) translate(-12 -12)">
+        <path d="M12.4 12c0-2 5.6-5.6 5.6-5.6c2.3-.1-2.1 14-5.7 13.5c-1.7-.1-1.5-6.4-1.9-5.9c0 0 0 0 0 0c0-.6-5.8-.1-5.9-1.9c-.5-3.6 13-7.6 13.5-5.7"/>
+      </g>
     </motion.svg>
   )
 }
