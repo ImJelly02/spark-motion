@@ -58,12 +58,14 @@ export function DownloadIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="rotate(90, 12, 12)">
-        <path d="M10 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
-        <path d="M3 9l1 3-1 3"/>
-        <path d="M6 9.5l1 2.5-1 2.5"/>
+      <g transform='translate(12 12) scale(1.1) translate(-12 -12)' >
+        <g transform="rotate(90, 12, 12)">
+          <path d="M10 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
+          <path d="M3 9l1 3-1 3"/>
+          <path d="M6 9.5l1 2.5-1 2.5"/>
+        </g>
+        <path d="M5 20c1.2 1.4 2.6 2 4 2h6c1.4 0 2.8-.6 4-2" />
       </g>
-      <path d="M5 20c1.2 1.4 2.6 2 4 2h6c1.4 0 2.8-.6 4-2" />
     </motion.svg>
   )
 }
