@@ -9,13 +9,13 @@ import {
   isMountTriggeredAnimation,
 } from '../animations/helpers'
 
-export function HeartIcon(props: SparkMotionIconProps) {
+export function UploadIcon(props: SparkMotionIconProps) {
   const {
     size = iconDefaults.size,
     color = iconDefaults.color,
     strokeWidth = iconDefaults.strokeWidth,
     animated = iconDefaults.animated,
-    animation = 'doublePulse',
+    animation = 'tapPop',
     duration,
     loop = iconDefaults.loop,
     className,
@@ -25,7 +25,6 @@ export function HeartIcon(props: SparkMotionIconProps) {
   const controls = useAnimation()
   const whileTap = getWhileTapConfig(animation)
   const isInteractive = Boolean(onClick || (animated && !isMountTriggeredAnimation(animation)))
-
 
   useEffect(() => {
     if (!animated || (!isMountTriggeredAnimation(animation) && !loop)) {
@@ -59,11 +58,12 @@ export function HeartIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="translate(12 12) scale(1.3) translate(-12 -12)">
-        <path d="M12 19.5c-5-3-9-7-8-12C4.5 4 8 3 12 6.5c4-3.5 7.5-2.5 8 1 .5 5-3 9-8 12z" />
-        <path d="M11 21.5c0-1 2-1 2 0" />
-        <path d="M6 8a4 4 0 0 1 3-3" />
+      <g transform="rotate(270, 12, 12)">
+        <path d="M9 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
+        <path d="M2 9l1 3-1 3"/>
+        <path d="M5 9.5l1 2.5-1 2.5"/>
       </g>
+      <path d="M5 5c1.2-1.4 2.6-2 4-2h6c1.4 0 2.8.6 4 2"/>
     </motion.svg>
   )
 }

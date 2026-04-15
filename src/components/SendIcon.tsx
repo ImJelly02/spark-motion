@@ -9,7 +9,7 @@ import {
   isMountTriggeredAnimation,
 } from '../animations/helpers'
 
-export function HeartIcon(props: SparkMotionIconProps) {
+export function SendIcon(props: SparkMotionIconProps) {
   const {
     size = iconDefaults.size,
     color = iconDefaults.color,
@@ -25,7 +25,6 @@ export function HeartIcon(props: SparkMotionIconProps) {
   const controls = useAnimation()
   const whileTap = getWhileTapConfig(animation)
   const isInteractive = Boolean(onClick || (animated && !isMountTriggeredAnimation(animation)))
-
 
   useEffect(() => {
     if (!animated || (!isMountTriggeredAnimation(animation) && !loop)) {
@@ -59,11 +58,7 @@ export function HeartIcon(props: SparkMotionIconProps) {
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="translate(12 12) scale(1.3) translate(-12 -12)">
-        <path d="M12 19.5c-5-3-9-7-8-12C4.5 4 8 3 12 6.5c4-3.5 7.5-2.5 8 1 .5 5-3 9-8 12z" />
-        <path d="M11 21.5c0-1 2-1 2 0" />
-        <path d="M6 8a4 4 0 0 1 3-3" />
-      </g>
+      <path d="M12.4 12c0-2 5.6-5.6 5.6-5.6c2.3-.1-2.1 14-5.7 13.5c-1.7-.1-1.5-6.4-1.9-5.9c0 0 0 0 0 0c0-.6-5.8-.1-5.9-1.9c-.5-3.6 13-7.6 13.5-5.7"/>
     </motion.svg>
   )
 }
