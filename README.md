@@ -1,29 +1,25 @@
 # spark-motion
 
 > A motion-first icon library for React.
-
-[![npm version](https://img.shields.io/npm/v/spark-motion)](https://www.npmjs.com/package/spark-motion)
-[![license](https://img.shields.io/npm/l/spark-motion)](./LICENSE)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/spark-motion)](https://bundlephobia.com/package/spark-motion)
-
 Hand-drawn animated icons with a unified API. Small, expressive, and ready to drop into any React project.
 
 ## Features
 
-- 6 hand-drawn icons with unique character
-- 4 animation presets — wiggle, tapPop, doublePulse, spin
+- 12 hand-drawn SVG icons with unique character
+- 5 animation presets — wiggle, tapPop, doublePulse, spin, float
 - Unified props across all icons
+- Pointer-consistent interaction via Motion `onTap` (mouse, touch, stylus)
 - Tree-shakeable ESM + CJS exports
 - Full TypeScript support
-- Built on Framer Motion
+- Built on [Motion for React](https://motion.dev)
 
 ## Install
 
 ```bash
-npm install spark-motion framer-motion
+npm install spark-motion motion
 ```
 
-`framer-motion` is a peer dependency — install it alongside spark-motion if you don't have it already.
+`motion` is a peer dependency — install it alongside spark-motion if you don't have it already.
 
 ## Quick start
 
@@ -39,14 +35,20 @@ Click the icon and it plays its default animation (doublePulse for HeartIcon). E
 
 ## Icons
 
-| Icon | Default animation | Description |
-|------|-------------------|-------------|
+| Icon | Default | Description |
+|------|---------|-------------|
 | `HeartIcon` | doublePulse | Feedback / like |
 | `BellIcon` | wiggle | Notification / alert |
 | `PlayIcon` | tapPop | Media / action |
 | `RefreshIcon` | spin | Reload / sync |
 | `ArrowRightIcon` | tapPop | Navigation / direction |
 | `LoadingIcon` | spin | Loading / progress |
+| `SearchIcon` | wiggle | Search / find |
+| `SendIcon` | doublePulse | Send / submit |
+| `ShareIcon` | tapPop | Share / distribute |
+| `UploadIcon` | float | Upload / attach |
+| `DownloadIcon` | float | Download / save |
+| `BackToTopIcon` | float | Scroll to top |
 
 ## Animation presets
 
@@ -56,11 +58,13 @@ Click the icon and it plays its default animation (doublePulse for HeartIcon). E
 | `tapPop` | Scale punch with press-down | On click |
 | `doublePulse` | Two-beat scale + lift | On click |
 | `spin` | Continuous rotation | On mount |
+| `float` | Gentle vertical drift | On click |
 
 ```tsx
 <BellIcon animated animation="wiggle" />
 <PlayIcon animated animation="tapPop" />
-<RefreshIcon animated animation="spin" loop />
+<RefreshIcon animated animation="spin" />
+<UploadIcon animated animation="float" />
 ```
 
 ## Props
@@ -73,7 +77,7 @@ interface SparkMotionIconProps {
   color?: string             // Default: 'currentColor'
   strokeWidth?: number       // Default: 1.75
   animated?: boolean         // Default: false
-  animation?: 'wiggle' | 'tapPop' | 'doublePulse' | 'spin'
+  animation?: 'wiggle' | 'tapPop' | 'doublePulse' | 'spin' | 'float'
   duration?: number          // Default: preset-based
   loop?: boolean             // Default: false
   className?: string
@@ -119,10 +123,17 @@ The `spin` preset is mount-triggered — it starts animating as soon as the comp
 />
 ```
 
+## Roadmap
+
+### v2 (planned)
+- Web Components support (`<spark-heart animated>`) for plain HTML / any framework
+- CSS animation classes for zero-JS usage
+- Additional icons and animation presets
+
 ## Development
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/spark-motion.git
+git clone https://github.com/ImJelly02/spark-motion.git
 cd spark-motion
 npm install
 npm run build    # outputs to dist/
@@ -131,4 +142,4 @@ npm run dev      # watch mode
 
 ## License
 
-[TBD](./LICENSE)
+[MIT](./LICENSE)
