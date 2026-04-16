@@ -24,6 +24,9 @@ export function getAnimationConfig(
 
   if (loop || isMountTriggeredAnimation(animation)) {
     transition.repeat = Infinity
+    if (animation !== 'spin') {
+      transition.repeatDelay = 0.4
+    }
   }
 
   return {
