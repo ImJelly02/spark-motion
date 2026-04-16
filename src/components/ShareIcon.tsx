@@ -3,7 +3,6 @@ import { motion, useAnimation } from 'framer-motion'
 import { iconDefaults } from '../types/icon'
 import type { SparkMotionIconProps } from '../types/icon'
 import {
-  getAnimationConfig,
   getIconInteractionStyle,
   getWhileTapConfig,
   isMountTriggeredAnimation,
@@ -22,21 +21,29 @@ export function ShareIcon(props: SparkMotionIconProps) {
     onClick,
   } = props
 
-  const controls = useAnimation()
+  const circleControls = useAnimation()
   const whileTap = getWhileTapConfig(animation)
   const isInteractive = Boolean(onClick || (animated && !isMountTriggeredAnimation(animation)))
+
+  const resolvedDuration = duration ?? 0.6
+
+  const triggerCircles = () => {
+    void circleControls.start({
+      r: [3, 3.8, 3],
+      transition: { duration: resolvedDuration },
+    })
+  }
 
   useEffect(() => {
     if (!animated || (!isMountTriggeredAnimation(animation) && !loop)) {
       return
     }
-
-    void controls.start(getAnimationConfig(animation, duration, loop))
-  }, [animated, animation, controls, duration, loop])
+    triggerCircles()
+  }, [animated, animation, circleControls, duration, loop])
 
   const handleClick = () => {
     if (animated && !isMountTriggeredAnimation(animation)) {
-      void controls.start(getAnimationConfig(animation, duration, loop))
+      triggerCircles()
     }
     onClick?.()
   }
@@ -53,17 +60,20 @@ export function ShareIcon(props: SparkMotionIconProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
-      animate={controls}
       whileTap={whileTap}
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <circle cx="18" cy="6" r="3" />
-      <circle cx="6" cy="12" r="3" />
-      <circle cx="18" cy="18" r="3" />
-      <path d="M8.5 10.5c3-2 2-4 7-3.5" />
-      <path d="M8.5 13.5c3 2 2 4 7 3.5" />
-      <path d="M16.5 4.5a1.5 1.5 0 0 1 1.5 1" />
+      <g transform="translate(12 12) scale(1.12) translate(-12 -12)">
+        <motion.circle cx="18" cy="6" r="3" animate={circleControls} />
+        <motion.circle cx="6" cy="12" r="3" animate={circleControls} />
+        <motion.circle cx="18" cy="18" r="3" animate={circleControls} />
+
+        {/* Lines stay static */}
+        <path d="M8.5 10.5c3-2 2-4 7-3.5" />
+        <path d="M8.5 13.5c3 2 2 4 7 3.5" />
+        <path d="M16.5 4.5a1.5 0 0 1 1.5 1" />
+      </g>
     </motion.svg>
   )
 }
