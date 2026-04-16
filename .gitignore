@@ -1,3 +1,5 @@
 node_modules
 .claude
 spark-motion-v1-spec.md
+dist
+playground-dist
