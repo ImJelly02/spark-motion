@@ -24,7 +24,7 @@ export const presets: Record<AnimationPreset, AnimationDefinition> = {
       scale: 0.9,
     },
     animate: {
-      scale: [1, 1.14, 1],
+      scale: [1, 1.17, 1],
     },
   },
 
