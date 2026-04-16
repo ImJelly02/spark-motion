@@ -3,6 +3,7 @@ export type SparkMotionAnimation =
   | 'tapPop'
   | 'spin'
   | 'doublePulse'
+  | 'float'
 
 export interface SparkMotionIconProps {
   /** Icon size in pixels. Default: 24 */

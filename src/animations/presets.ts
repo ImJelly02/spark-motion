@@ -1,4 +1,4 @@
-import type { TargetAndTransition } from 'framer-motion'
+import { animate, type TargetAndTransition } from 'motion/react'
 import type { SparkMotionAnimation } from '../types/icon'
 
 export type AnimationPreset = SparkMotionAnimation
@@ -41,6 +41,13 @@ export const presets: Record<AnimationPreset, AnimationDefinition> = {
     animate: {
       scale: [1, 1.12, 1, 1.12, 1],
       y: [0, -0.5, 0, -0.5, 0],
+    },
+  },
+
+  float: {
+    defaultDuration: 1.2,
+    animate: {
+      y: [0, -1, 2, -1, 2, 0],
     },
   },
 }
