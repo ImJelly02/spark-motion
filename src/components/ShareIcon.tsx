@@ -54,7 +54,7 @@ export function ShareIcon(props: SparkMotionIconProps) {
       strokeLinejoin="round"
       className={className}
       whileTap={whileTap}
-      onClick={handleClick}
+      onTap={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       {/* Only this group animates */}

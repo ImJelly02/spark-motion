@@ -55,7 +55,7 @@ export function BellIcon(props: SparkMotionIconProps) {
       className={className}
       animate={controls}
       whileTap={whileTap}
-      onClick={handleClick}
+      onTap={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       <g transform="translate(11.6 12.2) scale(1.25) translate(-12 -12)">

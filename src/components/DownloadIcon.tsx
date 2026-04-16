@@ -54,7 +54,7 @@ export function DownloadIcon(props: SparkMotionIconProps) {
       strokeLinejoin="round"
       className={className}
       whileTap={whileTap}
-      onClick={handleClick}
+      onTap={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       <g transform='translate(12 12) scale(1.1) translate(-12 -12)' >

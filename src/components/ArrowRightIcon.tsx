@@ -56,7 +56,7 @@ export function ArrowRightIcon(props: SparkMotionIconProps) {
       className={className}
       animate={controls}
       whileTap={whileTap}
-      onClick={handleClick}
+      onTap={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       <g transform="translate(12.5 12) scale(1.13) translate(-12 -12)">

@@ -55,7 +55,7 @@ export function SearchIcon(props: SparkMotionIconProps) {
       className={className}
       animate={controls}
       whileTap={whileTap}
-      onClick={handleClick}
+      onTap={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       <circle cx="8.6" cy="8.5" r="7.5"/>

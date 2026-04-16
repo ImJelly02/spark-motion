@@ -56,7 +56,7 @@ export function PlayIcon(props: SparkMotionIconProps) {
       className={className}
       animate={controls}
       whileTap={whileTap}
-      onClick={handleClick}
+      onTap={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       <g transform="translate(16, 14) scale(1.25) translate(-12 -12)">

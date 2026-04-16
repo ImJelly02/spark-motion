@@ -56,7 +56,7 @@ export function HeartIcon(props: SparkMotionIconProps) {
       className={className}
       animate={controls}
       whileTap={whileTap}
-      onClick={handleClick}
+      onTap={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       <g transform="translate(12 12) scale(1.3) translate(-12 -12)">
