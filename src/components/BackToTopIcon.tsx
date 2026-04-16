@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { motion, useAnimation } from 'motion/react'
 import { iconDefaults } from '../types/icon'
 import type { SparkMotionIconProps } from '../types/icon'
 import {
@@ -15,7 +15,7 @@ export function BackToTopIcon(props: SparkMotionIconProps) {
     color = iconDefaults.color,
     strokeWidth = iconDefaults.strokeWidth,
     animated = iconDefaults.animated,
-    animation = 'wiggle',
+    animation = 'float',
     duration,
     loop = iconDefaults.loop,
     className,
@@ -53,17 +53,18 @@ export function BackToTopIcon(props: SparkMotionIconProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
-      animate={controls}
       whileTap={whileTap}
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
-      <g transform="rotate(180, 12, 12) translate(12 11) scale(1.1) translate(-12 -12)">
-        <g transform="rotate(90, 12, 12)">
-          <path d="M10 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
-          <path d="M3 9l1 3-1 3"/>
-          <path d="M6.2 9.8l.8 2.2-.8 2.2"/>
-        </g>
+      <g transform="rotate(180, 12, 12) translate(12 12) scale(1.1) translate(-12 -12)">
+        <motion.g animate={controls}>
+          <g transform='rotate(90, 12, 12)'>
+            <path d="M10 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
+            <path d="M3 9l1 3-1 3"/>
+            <path d="M6.2 9.8l.8 2.2-.8 2.2"/>
+          </g>
+        </motion.g>
         <path d="M4.5 21.5c1-.8 2-.8 3 0s2 .8 3 0 2-.8 3 0 2 .8 3 0 2-.8 3 0" />
       </g>
     </motion.svg>

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { motion, useAnimation } from 'motion/react'
 import { iconDefaults } from '../types/icon'
 import type { SparkMotionIconProps } from '../types/icon'
 import {
@@ -15,7 +15,7 @@ export function DownloadIcon(props: SparkMotionIconProps) {
     color = iconDefaults.color,
     strokeWidth = iconDefaults.strokeWidth,
     animated = iconDefaults.animated,
-    animation = 'tapPop',
+    animation = 'float',
     duration,
     loop = iconDefaults.loop,
     className,
@@ -53,17 +53,18 @@ export function DownloadIcon(props: SparkMotionIconProps) {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
-      animate={controls}
       whileTap={whileTap}
       onClick={handleClick}
       style={getIconInteractionStyle(isInteractive)}
     >
       <g transform='translate(12 12) scale(1.1) translate(-12 -12)' >
-        <g transform="rotate(90, 12, 12)">
-          <path d="M10 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
-          <path d="M3 9l1 3-1 3"/>
-          <path d="M6 9.5l1 2.5-1 2.5"/>
-        </g>
+        <motion.g animate={controls}>
+          <g transform="rotate(90, 12, 12)">
+            <path d="M10 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
+            <path d="M3 9l1 3-1 3"/>
+            <path d="M6 9.5l1 2.5-1 2.5"/>
+          </g>
+        </motion.g>
         <path d="M5 20c1.2 1.4 2.6 2 4 2h6c1.4 0 2.8-.6 4-2" />
       </g>
     </motion.svg>

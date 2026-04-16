@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { motion, useAnimation } from 'motion/react'
 import { iconDefaults } from '../types/icon'
 import type { SparkMotionIconProps } from '../types/icon'
 import {
@@ -15,7 +15,7 @@ export function UploadIcon(props: SparkMotionIconProps) {
     color = iconDefaults.color,
     strokeWidth = iconDefaults.strokeWidth,
     animated = iconDefaults.animated,
-    animation = 'tapPop',
+    animation = 'float',
     duration,
     loop = iconDefaults.loop,
     className,
@@ -59,11 +59,11 @@ export function UploadIcon(props: SparkMotionIconProps) {
       style={getIconInteractionStyle(isInteractive)}
     >
       <g transform='translate(12 12) scale(1.1) translate(-12 -12)' >
-        <g transform="rotate(270, 12, 12)">
-          <path d="M15 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
-          <path d="M8 9l1 3-1 3"/>
-          <path d="M11 9.5l1 2.5-1 2.5"/>
-        </g>
+          <g transform='rotate(270, 12, 12)'>
+            <path d="M15 8c2.5-1 5 0.5 6 3 0.5 1.2 0.5 2.2-0.5 3.5-1.5 2-3.5 2.5-5.5 2.5-1-1.5-1-2.5 0-4z"/>
+            <path d="M8 9l1 3-1 3"/>
+            <path d="M11 9.5l1 2.5-1 2.5"/>
+          </g>
         <path d="M5 20c1.2 1.4 2.6 2 4 2h6c1.4 0 2.8-.6 4-2" />
       </g>
     </motion.svg>
