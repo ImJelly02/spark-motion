@@ -20,6 +20,7 @@
     "dev": "vite",
     "build": "tsup && node -e \"require('node:fs').rmSync('dist/index.d.mts', { force: true })\"",
     "build:lib": "npm run build",
+    "build:playground": "vite build --outDir playground-dist",
     "dev:lib": "tsup --watch",
     "typecheck": "tsc --noEmit"
   },
