@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { motion, useAnimation } from 'motion/react'
 import { iconDefaults } from '../types/icon'
 import type { SparkMotionIconProps } from '../types/icon'
 import {

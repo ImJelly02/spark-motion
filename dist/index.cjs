@@ -1,7 +1,7 @@
 'use strict';
 
-var react = require('react');
-var framerMotion = require('framer-motion');
+var react$1 = require('react');
+var react = require('motion/react');
 var jsxRuntime = require('react/jsx-runtime');
 
 // src/components/HeartIcon.tsx
@@ -44,6 +44,12 @@ var presets = {
     animate: {
       scale: [1, 1.12, 1, 1.12, 1],
       y: [0, -0.5, 0, -0.5, 0]
+    }
+  },
+  float: {
+    defaultDuration: 1.2,
+    animate: {
+      y: [0, -4, 0, -4, 0]
     }
   }
 };
@@ -93,10 +99,10 @@ function HeartIcon(props) {
     className,
     onClick
   } = props;
-  const controls = framerMotion.useAnimation();
+  const controls = react.useAnimation();
   const whileTap = getWhileTapConfig(animation);
   const isInteractive = Boolean(onClick || animated && !isMountTriggeredAnimation(animation));
-  react.useEffect(() => {
+  react$1.useEffect(() => {
     if (!animated || !isMountTriggeredAnimation(animation) && !loop) {
       return;
     }
@@ -109,7 +115,7 @@ function HeartIcon(props) {
     onClick?.();
   };
   return /* @__PURE__ */ jsxRuntime.jsx(
-    framerMotion.motion.svg,
+    react.motion.svg,
     {
       xmlns: "http://www.w3.org/2000/svg",
       width: size,
@@ -145,10 +151,10 @@ function BellIcon(props) {
     className,
     onClick
   } = props;
-  const controls = framerMotion.useAnimation();
+  const controls = react.useAnimation();
   const whileTap = getWhileTapConfig(animation);
   const isInteractive = Boolean(onClick || animated && !isMountTriggeredAnimation(animation));
-  react.useEffect(() => {
+  react$1.useEffect(() => {
     if (!animated || !isMountTriggeredAnimation(animation) && !loop) {
       return;
     }
@@ -161,7 +167,7 @@ function BellIcon(props) {
     onClick?.();
   };
   return /* @__PURE__ */ jsxRuntime.jsx(
-    framerMotion.motion.svg,
+    react.motion.svg,
     {
       xmlns: "http://www.w3.org/2000/svg",
       width: size,
@@ -197,10 +203,10 @@ function PlayIcon(props) {
     className,
     onClick
   } = props;
-  const controls = framerMotion.useAnimation();
+  const controls = react.useAnimation();
   const whileTap = getWhileTapConfig(animation);
   const isInteractive = Boolean(onClick || animated && !isMountTriggeredAnimation(animation));
-  react.useEffect(() => {
+  react$1.useEffect(() => {
     if (!animated || !isMountTriggeredAnimation(animation) && !loop) {
       return;
     }
@@ -213,7 +219,7 @@ function PlayIcon(props) {
     onClick?.();
   };
   return /* @__PURE__ */ jsxRuntime.jsx(
-    framerMotion.motion.svg,
+    react.motion.svg,
     {
       xmlns: "http://www.w3.org/2000/svg",
       width: size,
@@ -248,10 +254,10 @@ function LoadingIcon(props) {
     className,
     onClick
   } = props;
-  const controls = framerMotion.useAnimation();
+  const controls = react.useAnimation();
   const whileTap = getWhileTapConfig(animation);
   const isInteractive = Boolean(onClick || animated && !isMountTriggeredAnimation(animation));
-  react.useEffect(() => {
+  react$1.useEffect(() => {
     if (!animated || !isMountTriggeredAnimation(animation) && !loop) {
       return;
     }
@@ -264,7 +270,7 @@ function LoadingIcon(props) {
     onClick?.();
   };
   return /* @__PURE__ */ jsxRuntime.jsx(
-    framerMotion.motion.svg,
+    react.motion.svg,
     {
       xmlns: "http://www.w3.org/2000/svg",
       width: size,
@@ -302,10 +308,10 @@ function RefreshIcon(props) {
     className,
     onClick
   } = props;
-  const controls = framerMotion.useAnimation();
+  const controls = react.useAnimation();
   const whileTap = getWhileTapConfig(animation);
   const isInteractive = Boolean(onClick || animated && !isMountTriggeredAnimation(animation));
-  react.useEffect(() => {
+  react$1.useEffect(() => {
     if (!animated || !isMountTriggeredAnimation(animation) && !loop) {
       return;
     }
@@ -318,7 +324,7 @@ function RefreshIcon(props) {
     onClick?.();
   };
   return /* @__PURE__ */ jsxRuntime.jsx(
-    framerMotion.motion.svg,
+    react.motion.svg,
     {
       xmlns: "http://www.w3.org/2000/svg",
       width: size,
@@ -354,10 +360,10 @@ function ArrowRightIcon(props) {
     className,
     onClick
   } = props;
-  const controls = framerMotion.useAnimation();
+  const controls = react.useAnimation();
   const whileTap = getWhileTapConfig(animation);
   const isInteractive = Boolean(onClick || animated && !isMountTriggeredAnimation(animation));
-  react.useEffect(() => {
+  react$1.useEffect(() => {
     if (!animated || !isMountTriggeredAnimation(animation) && !loop) {
       return;
     }
@@ -370,7 +376,7 @@ function ArrowRightIcon(props) {
     onClick?.();
   };
   return /* @__PURE__ */ jsxRuntime.jsx(
-    framerMotion.motion.svg,
+    react.motion.svg,
     {
       xmlns: "http://www.w3.org/2000/svg",
       width: size,

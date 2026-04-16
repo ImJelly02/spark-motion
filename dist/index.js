@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useAnimation, motion } from 'framer-motion';
+import { useAnimation, motion } from 'motion/react';
 import { jsx, jsxs } from 'react/jsx-runtime';
 
 // src/components/HeartIcon.tsx
@@ -42,6 +42,12 @@ var presets = {
     animate: {
       scale: [1, 1.12, 1, 1.12, 1],
       y: [0, -0.5, 0, -0.5, 0]
+    }
+  },
+  float: {
+    defaultDuration: 1.2,
+    animate: {
+      y: [0, -4, 0, -4, 0]
     }
   }
 };

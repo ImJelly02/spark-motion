@@ -6,7 +6,7 @@ export default defineConfig({
   dts: true,
   splitting: true,
   clean: true,
-  external: ['react', 'react-dom', 'framer-motion'],
+  external: ['react', 'react-dom', 'motion'],
   treeshake: true,
   outExtension({ format }) {
     return {

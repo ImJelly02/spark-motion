@@ -1,6 +1,6 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
 
-type SparkMotionAnimation = 'wiggle' | 'tapPop' | 'spin' | 'doublePulse';
+type SparkMotionAnimation = 'wiggle' | 'tapPop' | 'spin' | 'doublePulse' | 'float';
 interface SparkMotionIconProps {
     /** Icon size in pixels. Default: 24 */
     size?: number;
