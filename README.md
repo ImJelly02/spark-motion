@@ -1,12 +1,12 @@
 # spark-motion
 
 > A motion-first icon library for React.
-Hand-drawn animated icons with a unified API. Small, expressive, and ready to drop into any React project.
+Hand-drawn animated vector icons with a unified API. Small, expressive, and ready to drop into any React project.
 
 ## Features
 
 - 12 hand-drawn SVG icons with unique character
-- 5 animation presets — wiggle, tapPop, doublePulse, spin, float
+- 5 animation presets : wiggle, tapPop, doublePulse, spin, float
 - Unified props across all icons
 - Pointer-consistent interaction via Motion `onTap` (mouse, touch, stylus)
 - Tree-shakeable ESM + CJS exports
